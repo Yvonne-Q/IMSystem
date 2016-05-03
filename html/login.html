@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IM-智会</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../css/index.css" rel="stylesheet" type="text/css" />
+    <link href="../css/detail.css" rel="stylesheet" type="text/css" />
+    <link href="../css/user.css" rel="stylesheet" type="text/css" />
+    <link href="../css/announcement.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.toaster.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+<body>
+    <div class="home"><!--整个页面-->
+        <header class="header"><!--头部-->
+            <nav class="navbar navbar-default navbar-fixed-top"><!--导航条-->
+                <div class="container">
+                    <div class="row">
+                        <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+                            <div class="navbar-header navbar-left">
+                                <a class="navbar-brand-mc" href="/">
+                                    <img src="../images/IMlogoM.png" alt="logo"/><!--系统logo-->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hidden-xs visible-sm-block col-sm-2">
+                            <div class="navbar-header navbar-left">
+                                <a class="navbar-brand-mc" href="/">
+                                    <img src="../images/IMlogoM.png" alt="logo"/><!--以自适应所有屏幕-->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="visible-xs-block col-xs-2">
+                            <div class="navbar-header navbar-left">
+                                <a class="navbar-brand-mc" href="/">
+                                    <img src="../images/IMLogo2.png" alt="logo"/><!--以自适应所有屏幕-->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-5 col-md-5 col-lg-5">
+                        </div>
+                        <div class="hidden-xs col-sm-5 col-md-4 col-lg-4">
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav pull-right">
+                                    <li id="nav-index"><a href="/">首页</a></li>
+                                    <li id="nav-notice"><a href="/announcement">公告<span class="badge">2</span></a></li>
+                                    <li><a href="/">登录</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="visible-xs-block col-xs-2">
+                            <div class="nav nav-hamburger pull-right">
+                                <a href="#ham" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="/">首页</a></li>
+                                    <li id="xs-nav-notice"><a href="/announcement">公告<span class="badge">2</span></a></li>
+                                    <li><a href="/">登录</a></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--<div class="content">-->
+
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="wrapper-intro col-xs-0 col-sm-6 col-md-8 col-lg-8">
+                            <img src="../images/IMLogo2.png"/><!--logo图标-->
+                            <br/>
+                            <img src="../images/IMTitle.png"/><!--字体内容-->
+                        </div>
+
+                        <!--<div class="wrapper-intro col-xs-0 col-sm-0 col-md-2 col-lg-2"></div>-->
+
+                        <div class="log-or-sign col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" id="tab-sl">
+                                <li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab" id="tri-login">登&nbsp;&nbsp;录</a></li>
+                                <!--<li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab" id="tri-register">注册·加入米课</a></li>-->
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <!-- Tab Log in -->
+                                <form role="tabpanel" class="tab-pane fade in active" id="login" onsubmit="return false;">
+                                    <div class="tab-info" id="login-info"></div>
+                                    <label for="login-number" class="sr-only">工号</label>
+                                    <input type="text" id="login-number" class="form-control" placeholder="工号" required autofocus>
+                                    <label for="login-password" class="sr-only">密码</label>
+                                    <input type="password" id="login-password" class="form-control" placeholder="密码" required>
+                                    <div class="checkbox">
+                                        <label class="f-white">
+                                            <input type="checkbox" id="login-remember" checked> 7天免登录
+                                        </label>
+                                        <a class="pull-right forgot" href="../html/recover.html">忘记密码</a>
+                                    </div>
+                                    <button class="btn btn-lg btn-primary btn-block login">登录</button>
+                                </form>
+                                <!-- Tab Register -->
+                                <!--<form role="tabpanel" class="tab-pane fade" id="register" onsubmit="return false;">-->
+                                    <!--<div class="tab-info" id="register-info"></div>-->
+                                    <!--<label for="register-email" class="sr-only">邮箱</label>-->
+                                    <!--<input type="email" id="register-email" class="form-control" placeholder="邮箱" required autofocus>-->
+                                    <!--<label for="register-password" class="sr-only">密码</label>-->
+                                    <!--<input type="password" id="register-password" class="form-control" placeholder="密码" required>-->
+                                    <!--<button class="btn btn-lg btn-primary btn-block register">注册</button>-->
+                                <!--</form>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <img class="footer-icon img-responsive pull-left" src="../images/IMLogo2.png"/>
+                    <div class="footer-seg pull-right">
+                        <h5>关于智会</h5>
+                        <p>智会——基于物联网的智能会议室系统，旨在让企业更智能高效地管理会议室，避免浪费、空置。让使用者更方便有序地预定、使用会议室，提高工作效率和资源利用率，一步到位，全程智能。</p>
+                    </div>
+                </div>
+                <!--<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">-->
+                <!--<img class="footer-icon img-responsive img-rounded pull-left" src="/Public/img/LilyStudio.png"/>-->
+                <!--<div class="footer-seg pull-right">-->
+                <!--<h5>关于小百合工作室</h5>-->
+                <!--<p>工作室成立于2000年，是由南京大学网络爱好者自发组织的一个学生团体，致力于传播校园网络文化，促进校园网络建设，服务广大同学，并为爱好网络和计算机科学与技术的同学提供一个交流学习、共同提高的平台。</p>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
+            </div>
+            <div class="footer-info">
+                <p>
+                    <!--<a href="http://www.nju.edu.cn">智会首页</a>-->
+                    <!--<a href="http://jw.nju.edu.cn">教务</a>zhi'hui-->
+                    <a role="button" href="#" data-toggle="modal" data-target="#modal-feedback">意见反馈</a>
+                    <a class="special-link" href="#">关于我们^ ^</a>
+                </p>
+                <p>all right reserved 2016</p>
+                <!--<p>Copyright &copy;IM, 2015-2016</p>-->
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Feedback -->
+    <div class="modal fade" id="modal-feedback" tabindex="-1" role="dialog" aria-labelledby="modal-title-rate">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a role="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                    <h4 class="modal-title" id="modal-title-rate">我要对网站内容进行反馈&gt;&lt;</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="feedback-content">内容</label>
+                            <textarea class="form-control" id="feedback-content"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a role="button" class="btn btn-default" data-dismiss="modal">取消</a>
+                    <a role="button" class="btn btn-primary" id="send-feedback">发送反馈</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Feedback End -->
+    <script src="../js/footer.js" ></script>
+    <script src="../js/header.js" ></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-41774271-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+</body>
+</html>
