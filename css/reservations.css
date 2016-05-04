@@ -1,0 +1,77 @@
+.aa {
+    margin-top: 2rem;
+}
+
+#firstSelect {
+    height: 2.5rem;
+}
+
+#meetingMain {
+    background-color: #fff;
+    border-color: #A9A9A9;
+}
+
+#meetingPeopleNumber {
+    background-color: #fff;
+    border-color: #A9A9A9;
+}
+
+#dateTime {
+    background-color: #fff;
+    border-color: #A9A9A9;
+}
+
+#somethingElse {
+    background-color: #fff;
+    border-color: #A9A9A9;
+}
+
+
+#btn1 {
+    background: #54ABD4;
+    color: #fff;
+    float: right;
+}
+#top{
+    margin-top: 1rem;
+}
+.choose-room{
+    text-align: center;
+    margin-top: 2rem;
+}
+hr.line {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 135, 135, 0.75), rgba(0, 0, 0, 0));
+}
+.prompt{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+}
+.btn-reserved{
+    background: #54ABD4;
+    color: #fff;
+}
+.top-center >h1{
+    text-align: center;
+    color: #F51332;
+}
+.text-big{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+#btn3{
+    background: #54ABD4;
+    color: #fff;
+}
+#btn4{
+    background: #e5e5e5;
+    float: right;
+}
+.btn1{
+    background: #54ABD4;
+    color: #fff;
+    float: right;
+}
