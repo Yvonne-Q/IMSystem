@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="css/detail.css" rel="stylesheet" type="text/css"/>
+    <link href="css/user.css" rel="stylesheet" type="text/css"/>
+    <link href="css/reservations.css" rel="stylesheet" type="text/css"/>
+    <link href="css/announcement.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择会议室</title>
+</head>
+<body>
+<div class="home">
+    <header class="header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+                        <div class="navbar-header navbar-left">
+                            <a class="navbar-brand-mc" href="/">
+                                <img src="images/IMlogoM.png" alt="logo"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden-xs visible-sm-block col-sm-2">
+                        <div class="navbar-header navbar-left">
+                            <a class="navbar-brand-mc" href="/">
+                                <img src="images/IMlogoM.png" alt="logo"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="visible-xs-block col-xs-2">
+                        <div class="navbar-header navbar-left">
+                            <a class="navbar-brand-mc" href="/">
+                                <img src="images/IMLogo2.png" alt="logo"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-5 col-md-5 col-lg-5"></div>
+                    <div class="hidden-xs col-sm-5 col-md-4 col-lg-4">
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li id="nav-index"><a href="/">首页</a></li>
+                                <!--<li id="nav-course"><a href="/course">课程</a></li>-->
+                                <li id="nav-notice"><a href="announcement.html">公告<span class="badge">2</span></a></li>
+                                <li id="nav-user" class="dropdown">
+                                    <a href="#user" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                       aria-haspopup="true" aria-expanded="false">个人 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="user">个人主页</a></li>
+                                        <li><a>会点：35</a></li>
+                                        <li><a href="../images/message" id="nav-messages">消息盒子</a></li>
+                                        <li><a href="/user/basic">资料设置</a></li>
+                                        <li><a href="/user/logout" class="logout">退出登录</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="visible-xs-block col-xs-2">
+                        <div class="nav nav-hamburger pull-right">
+                            <a href="#ham" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false"><span
+                                    class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="/">首页</a></li>
+                                <!--<li><a href="/course">课程</a></li>-->
+                                <li id="xs-nav-notice"><a href="/announcement">公告<span class="badge">2</span></a></li>
+                                <li><a href="/user">个人主页</a></li>
+                                <li><a href="/message" id="nav-messages">消息盒子</a></li>
+                                <li><a href="/user/basic">资料设置</a></li>
+                                <li><a href="/user/logout" class="logout">退出登录</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="section meeting_situation" id="top">
+                <div class="row">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <!--当有符合优先选项中的会议室时，显示以下两个row部分。后面部分都不显示，直接到button-->
+                        <div class="row">
+                            <h3>以下是符合要求的会议室
+                                <small>您的需求为：A区，2幢，4楼（按优先选项降序排列）</small>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-xs-4 col-sm-3">
+                                <div class="choose-room">
+                                    <div class="card-icon">
+                                        <div class="box-f">
+                                            <div class="box-s">
+                                                <div class="box-t img-responsive"
+                                                     style="background-image: url(images/meetingfree.png);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <label>
+                                        <input type="radio" checked><br/>A区-2幢-403
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-4 col-sm-3">
+                                <div class="choose-room">
+                                    <div class="card-icon">
+                                        <div class="box-f">
+                                            <div class="box-s">
+                                                <div class="box-t img-responsive"
+                                                     style="background-image: url(images/meetingfree.png);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <label>
+                                        <input type="radio"><br/>A区-2幢-201
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-4 col-sm-3">
+                                <div class="choose-room">
+                                    <div class="card-icon">
+                                        <div class="box-f">
+                                            <div class="box-s">
+                                                <div class="box-t img-responsive"
+                                                     style="background-image: url(images/meetingfree.png);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <label>
+                                        <input type="radio"><br/>A区-4幢-301
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <hr class="line">
+                        <br/>
+                        <!--当有没有符合优先选项中的会议室时，显示以下两个row部分。-->
+                        <div class="row">
+                            <h3>以下是符合要求的会议室
+                                <small>您的需求为：A区，2幢，4楼（按优先选项降序排列）</small>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 prompt">
+                                <span>抱歉，没有符合要求的会议室，您可以在以下备选项中选择其他会议室或者退出。</span>
+                            </div>
+                        </div>
+                        <br/>
+                        <hr class="line">
+                        <br/>
+                        <!--当有没有符合优先选项中的会议室时，又有更大会议室选项时，再显示以下两个row部分。后面部分都不显示，直接到button-->
+                        <div class="row">
+                            <h3>更大的会议室
+                                <small>您需要付出更多点数</small>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-xs-4 col-sm-3">
+                                <div class="choose-room">
+                                    <div class="card-icon">
+                                        <div class="box-f">
+                                            <div class="box-s">
+                                                <div class="box-t img-responsive"
+                                                     style="background-image: url(images/meetingfree.png);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <label>
+                                        <input type="radio" checked><br/>A区-2幢-308<br/>（容纳30人）<br/>（需要50点）
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-4 col-sm-3">
+                                <div class="choose-room">
+                                    <div class="card-icon">
+                                        <div class="box-f">
+                                            <div class="box-s">
+                                                <div class="box-t img-responsive"
+                                                     style="background-image: url(images/meetingfree.png);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <label>
+                                        <input type="radio"><br/>A区-2幢-101<br/>（容纳30人）<br/>（需要50点）
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-4 col-sm-3">
+                                <div class="choose-room">
+                                    <div class="card-icon">
+                                        <div class="box-f">
+                                            <div class="box-s">
+                                                <div class="box-t img-responsive"
+                                                     style="background-image: url(images/meetingfree.png);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <label>
+                                        <input type="radio"><br/>A区-4幢-501<br/>（容纳30人）<br/>（需要50点）
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <hr class="line">
+                        <br/>
+                        <!--当有没有符合优先选项中的会议室时，且没有更大会议室选项时，显示以下两个row部分-->
+                        <div class="row">
+                            <h3>更大的会议室
+                                <small>您需要付出更多点数</small>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 prompt">
+                                <span>抱歉，没有符合要求的会议室，您可以在以下备选项中选择其他会议室或者退出。</span>
+                            </div>
+                        </div>
+                        <br/>
+                        <hr class="line">
+                        <br/>
+                        <!--当有没有符合优先选项中的会议室时，且没有更大会议室选项时，但其他区有合适的会议室，显示以下两个row部分。后面部分都不显示，直接到button-->
+                        <div class="row">
+                            <h3>其他区的会议室
+                                <small>您需要付出更多点数，且优先级在该区人员之后，您可能预定失败。若在您的预计开会时间前12小时该会议室还未被该区人员预定，您将收到预定成功通知。</small>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-xs-4 col-sm-3">
+                                <div class="choose-room">
+                                    <div class="card-icon">
+                                        <div class="box-f">
+                                            <div class="box-s">
+                                                <div class="box-t img-responsive"
+                                                     style="background-image: url(images/meetingfree.png);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <label>
+                                        <input type="radio" checked><br/>B区-2幢-306<br/>（容纳10人）<br/>（需要80点）
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-4 col-sm-3">
+                                <div class="choose-room">
+                                    <div class="card-icon">
+                                        <div class="box-f">
+                                            <div class="box-s">
+                                                <div class="box-t img-responsive"
+                                                     style="background-image: url(images/meetingfree.png);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <label>
+                                        <input type="radio"><br/>B区-5幢-301<br/>（容纳30人）<br/>（需要100点）
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-xs-4 col-sm-3">
+                                <div class="choose-room">
+                                    <div class="card-icon">
+                                        <div class="box-f">
+                                            <div class="box-s">
+                                                <div class="box-t img-responsive"
+                                                     style="background-image: url(images/meetingfree.png);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <label>
+                                        <input type="radio"><br/>C区-2幢-301<br/>（容纳30人）<br/>（需要100点）
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <hr class="line">
+                        <br/>
+                        <!--当有没有符合优先选项中的会议室时，且没有更大会议室选项时，且其他区也没有合适的会议室，显示以下两个row部分-->
+                        <div class="row">
+                            <h3>其他区的会议室
+                                <small>您需要付出更多点数，且优先级在该区人员之后，您可能预定失败。若在您的预计开会时间前12小时该会议室还未被该区人员预定，您将收到预定成功通知。</small>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 prompt">
+                                <span>很抱歉，所有会议室都订完了，您可以点击顶部导航栏首页退出预定。</span>
+                            </div>
+                        </div>
+                        <br/>
+                        <hr class="line">
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                                <button type="button" class="btn" id="btn2">上一步</button>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                                <button type="button" class="btn" id="btn1">下一步</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <img class="footer-icon img-responsive pull-left" src="images/IMLogo2.png"/>
+                <div class="footer-seg pull-right">
+                    <h5>关于智会</h5>
+                    <p>
+                        智会——基于物联网的智能会议室系统，旨在让企业更智能高效地管理会议室，避免浪费、空置。让使用者更方便有序地预定、使用会议室，提高工作效率和资源利用率，一步到位，全程智能。</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
+        </div>
+        <div class="footer-info">
+            <p>
+                <!--<a href="http://www.nju.edu.cn">智会首页</a>-->
+                <!--<a href="http://jw.nju.edu.cn">教务</a>zhi'hui-->
+                <a role="button" href="#" data-toggle="modal" data-target="#modal-feedback">意见反馈</a>
+                <a class="special-link" href="#">关于我们^ ^</a>
+            </p>
+            <p>all right reserved 2016</p>
+            <!--<p>Copyright &copy;IM, 2015-2016</p>-->
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
