@@ -10,11 +10,16 @@
     <link href="css/reservations.css" rel="stylesheet" type="text/css"/>
     <link href="css/announcement.css" rel="stylesheet" type="text/css"/>
     <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css"/>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.toaster.js"></script>
+    <script src="js/index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>会议详情</title>
 </head>
 <body>
-<div class="home">
     <header class="header">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -45,7 +50,7 @@
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav pull-right">
                                 <li id="nav-index"><a href="/">首页</a></li>
-                                <!--<li id="nav-course"><a href="/course">课程</a></li>-->
+                                <li><a href="myMeeting.html">会议记录</a></li>
                                 <li id="nav-notice"><a href="announcement.html">公告<span class="badge">2</span></a></li>
                                 <li id="nav-user" class="dropdown">
                                     <a href="#user" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -68,7 +73,7 @@
                                     class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
                             <ul class="dropdown-menu pull-right">
                                 <li><a href="/">首页</a></li>
-                                <!--<li><a href="/course">课程</a></li>-->
+                                <li><a href="myMeeting.html">会议记录</a></li>
                                 <li id="xs-nav-notice"><a href="/announcement">公告<span class="badge">2</span></a></li>
                                 <li><a href="/user">个人主页</a></li>
                                 <li><a href="/message" id="nav-messages">消息盒子</a></li>
@@ -84,16 +89,16 @@
         </nav>
     </header><!--导航栏-->
     <div class="content">
-        <div class="home-page container">
+        <div class="container">
             <div class="row">
                 <div class="home-sub col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <div class="hot-tag section">
                         <h4>快捷功能</h4>
                         <div class="tag-section">
-                            <a class="btn btn-primary btn-lg" href="#" role="button" style="width: 100%;">预订会议室</a>
+                            <a class="btn btn-primary btn-lg" href="reservations.html" role="button" style="width: 100%;">预订会议室</a>
                         </div>
                         <div class="tag-section">
-                            <a class="btn btn-default btn-lg" href="meetingrecord.html" target="_blank" role="button"
+                            <a class="btn btn-default btn-lg" href="myMeeting.html" target="_blank" role="button"
                                style="width: 100%;">我的会议</a>
                         </div>
                         <div class="tag-section">
@@ -114,19 +119,75 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                    <div class="section meeting_situation" id="a1">
-                        <h4>会议详情</h4>
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="section info">
+                        <div class="row" id="course-card">
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" >
+                                <div class="info-avatar" id="course-card-left" style="height: 341px;padding-top: 63.5px;">
+                                    <div class="info-icon">
+                                        <div class="box-f">
+                                            <div class="box-s">
+                                                <div class="box-t img-responsive" style="background-image: url(images/meetingfree.png);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3>106</h3>
+                                    <div class="course-buttons" id="course-buttons-3">
+                                        <div class="course-buttons" id="course-buttons-0" style=""><!--当该会议室为预留会议室时，需要添加display: inline-block-->
+                                            <a role="button" class="btn btn-primary want_course">预定</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="info-main">
+                                    <div class="info-line">所在区域：<span>A区</span></div>
+                                    <div class="info-line">楼号：<span>1号楼</span></div>
+                                    <div class="info-line">楼层：<span>1楼</span></div>
+                                    <div class="info-line">房号：<span>106</span></div>
+                                    <hr/>
+                                    <div class="info-line">会议室容纳量：<span>20人</span></div>
+                                    <div class="info-line">会议室会议室状态：<span>空闲</span></div>
+                                    <!--<hr/>-->
+                                    <!--<div class="info-line">时间：<span>(未知)</span></div>-->
+                                    <!--<div class="info-line">地点：<span>(未知)</span></div>-->
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="section">
+                        <h4>会议室图介</h4>
+                        <ul class="row">
+                            <li class="item col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <img src="images/meetingroom1.jpg">
+
+                            </li>
+                            <li class="item col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <img src="images/meetingroom2.jpg">
+                            </li>
+                            <li class="item col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <img src="images/meetingroom3.jpg">
+                            </li>
+                            <li class="item col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <img src="images/meetingroom2.jpg">
+                            </li>
+                            <li class="item col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <img src="images/meetingroom3.jpg">
+                            </li>
+                            <li class="item col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <img src="images/meetingroom1.jpg">
+                            </li>
+                            <li class="item col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <img src="images/meetingroom2.jpg">
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 <footer>
     <div class="container">
         <div class="row">
@@ -153,5 +214,41 @@
         </div>
     </div>
 </footer>
+    <!-- Modal Feedback -->
+    <div class="modal fade" id="modal-feedback" tabindex="-1" role="dialog" aria-labelledby="modal-title-rate">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a role="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                    <h4 class="modal-title" id="modal-title-rate">我要对网站内容进行反馈&gt;&lt;</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="feedback-content">内容</label>
+                            <textarea class="form-control" id="feedback-content"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a role="button" class="btn btn-default" data-dismiss="modal">取消</a>
+                    <a role="button" class="btn btn-primary" id="send-feedback">发送反馈</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Feedback End -->
+    <script src="js/footer.js" ></script>
+    <script src="js/header.js" ></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-41774271-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </body>
 </html>

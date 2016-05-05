@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="css/detail.css" rel="stylesheet" type="text/css"/>
+    <link href="css/user.css" rel="stylesheet" type="text/css"/>
+    <link href="css/reservations.css" rel="stylesheet" type="text/css"/>
+    <link href="css/announcement.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css"/>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.toaster.js"></script>
+    <script src="js/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IM-本次记录详情</title>
+</head>
+<body>
+    <header class="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+                    <div class="navbar-header navbar-left">
+                        <a class="navbar-brand-mc" href="/">
+                            <img src="images/IMlogoM.png" alt="logo"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden-xs visible-sm-block col-sm-2">
+                    <div class="navbar-header navbar-left">
+                        <a class="navbar-brand-mc" href="/">
+                            <img src="images/IMlogoM.png" alt="logo"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="visible-xs-block col-xs-2">
+                    <div class="navbar-header navbar-left">
+                        <a class="navbar-brand-mc" href="/">
+                            <img src="images/IMLogo2.png" alt="logo"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-8 col-sm-5 col-md-5 col-lg-5"></div>
+                <div class="hidden-xs col-sm-5 col-md-4 col-lg-4">
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav pull-right">
+                            <li id="nav-index"><a href="/">首页</a></li>
+                            <li><a href="myMeeting.html">会议记录</a></li>
+                            <li id="nav-notice"><a href="announcement.html">公告<span class="badge">2</span></a></li>
+                            <li id="nav-user" class="dropdown">
+                                <a href="#user" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">个人 <span class="caret"></span></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="user">个人主页</a></li>
+                                    <li><a>会点：35</a></li>
+                                    <li><a href="../images/message" id="nav-messages">消息盒子</a></li>
+                                    <li><a href="/user/basic">资料设置</a></li>
+                                    <li><a href="/user/logout" class="logout">退出登录</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visible-xs-block col-xs-2">
+                    <div class="nav nav-hamburger pull-right">
+                        <a href="#ham" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false"><span
+                                class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="myMeeting.html">会议记录</a></li>
+                            <li id="xs-nav-notice"><a href="/announcement">公告<span class="badge">2</span></a></li>
+                            <li><a href="/user">个人主页</a></li>
+                            <li><a href="/message" id="nav-messages">消息盒子</a></li>
+                            <li><a href="/user/basic">资料设置</a></li>
+                            <li><a href="/user/logout" class="logout">退出登录</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header><!--导航栏-->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="home-sub col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div class="hot-tag section">
+                        <h4>快捷功能</h4>
+                        <div class="tag-section">
+                            <a class="btn btn-primary btn-lg" href="reservations.html" role="button" style="width: 100%;">预订会议室</a>
+                        </div>
+                        <div class="tag-section">
+                            <a class="btn btn-default btn-lg" href="myMeeting.html" target="_blank" role="button"
+                               style="width: 100%;">我的会议</a>
+                        </div>
+                        <div class="tag-section">
+                            <a class="btn btn-default btn-lg" href="reserved.html" target="_blank" role="button"
+                               style="width: 100%;">预留会议室</a>
+                        </div>
+                        <div class="tag-section">
+                            <button type="button" class="btn btn-default dropdown-toggle btn-lg" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false" style="width: 100%;">
+                                更多功能 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" style="width: 100%;">
+                                <li><a href="#" target="_blank">敬请期待</a></li>
+                                <!--<li role="separator" class="divider"></li>-->
+                                <li><a href="#" target="_blank">...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                    <div class="section">
+                        <h4>会议记录详情</h4>
+                        <div class="row" id="course-card">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div style="text-align: center;vertical-align:middle;">
+                                    <div class="info-line">会议日期：<span>xxxx.xx.xx</span></div>
+                                    <div class="info-line">会议地点：<span>A1-106</span></div>
+                                    <!--<div class="info-line">楼层：<span>1楼</span></div>-->
+                                    <!--<div class="info-line">房号：<span>106</span></div>-->
+                                    <hr/>
+                                    <div class="info-line">会议类型：<span>部门会议</span></div>
+                                    <div class="info-line">会议主题：<span>xxxxxxxxxx</span></div>
+                                    <div class="info-line">与会人数：<span>20人</span></div>
+                                    <!--<hr/>-->
+                                    <!--<div class="info-line">时间：<span>(未知)</span></div>-->
+                                    <!--<div class="info-line">地点：<span>(未知)</span></div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <h4>会议小结</h4>
+                        <div class="row">
+                            <div style="text-align: center;vertical-align:middle;">
+                                <p class="conclusion_info" style="">本次会议的流程、内容以及会议展开过程中遇到的问题。并对会议室内部的设施等提出意见或建议。本次会议的流程、内容以及会议展开过程中遇到的问题。并对会议室内部的设施等提出意见或建议。本次会议的流程、内容以及会议展开过程中遇到的问题。并对会议室内部的设施等提出意见或建议。本次会议的流程、内容以及会议展开过程中遇到的问题。并对会议室内部的设施等提出意见或建议。本次会议的流程、内容以及会议展开过程中遇到的问题。并对会议室内部的设施等提出意见或建议。</p><!--当会议小结已经提交时会显示p元素中的内容，即添加display：block；样式-->
+                                <div id="no_conclusion" style=""><!--当会议小结已填写时隐藏该div，即添加display：none样式-->
+                                    <p><img src="images/warning.png" style="width: 50px;height: 50px;">您还未添加会议小结。</p>
+                                    <button class="btn btn-primary" onclick="conclusion()">点此添加会议小结</button>
+                                </div>
+                                <div id="complete_con"><!--点击添加会议小结后显示-->
+                                    <textarea id="text" name="text" style="width:650px;height: 200px;display: inline-block" placeholder="请在此添加本次会议小结"></textarea>
+                                    <button type="button" class="btn btn-primary" style="display: block;margin: auto;" data-toggle="modal" data-target="#modal-rate">提&nbsp;&nbsp;交</button>
+                                    <!-- Modal Rate -->
+                                    <div class="modal fade" id="modal-rate" tabindex="-1" role="dialog" aria-labelledby="modal-title-rate">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title">会议小结提交</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <strong>会议小结提交成功！</strong>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="success()">确&nbsp;&nbsp;定</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <h4>与会人名单</h4>
+                        <table class="row table">
+                            <thead>
+                            <tr>
+                                <td>工号</td>
+                                <td>姓名</td>
+                                <td>所在部门</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1029465432</td>
+                                    <td>王五</td>
+                                    <td>销售部</td>
+                                </tr>
+                                <tr>
+                                    <td>1234396506</td>
+                                    <td>张三</td>
+                                    <td>市场部</td>
+                                </tr>
+                                <tr>
+                                    <td>2837464928</td>
+                                    <td>李四</td>
+                                    <td>市场部</td>
+                                </tr>
+                                <tr>
+                                    <td>2487692817</td>
+                                    <td>刘明</td>
+                                    <td>会计部</td>
+                                </tr>
+                                <tr>
+                                    <td>2482692817</td>
+                                    <td>小红</td>
+                                    <td>会计部</td>
+                                </tr>
+                                <tr>
+                                    <td>2487642817</td>
+                                    <td>小王</td>
+                                    <td>会计部</td>
+                                </tr>
+                                <tr>
+                                    <td>2127692817</td>
+                                    <td>小芳</td>
+                                    <td>会计部</td>
+                                </tr>
+                                <tr>
+                                    <td>24876911817</td>
+                                    <td>小吴</td>
+                                    <td>会计部</td>
+                                </tr>
+                                <tr>
+                                    <td>2487692328</td>
+                                    <td>小李</td>
+                                    <td>会计部</td>
+                                </tr>
+                                <tr>
+                                    <td>2487692817</td>
+                                    <td>刘明</td>
+                                    <td>会计部</td>
+                                </tr>
+                                <tr>
+                                    <td>2487692817</td>
+                                    <td>刘明</td>
+                                    <td>会计部</td>
+                                </tr>
+                                <tr>
+                                    <td>2487692817</td>
+                                    <td>刘明</td>
+                                    <td>会计部</td>
+                                </tr>
+                                <tr>
+                                    <td>2487692817</td>
+                                    <td>刘明</td>
+                                    <td>会计部</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    function conclusion(){
+        $("#no_conclusion").hide();
+        $("#complete_con").show();
+    }
+    function success(){//成功后清空文本框
+        $("#text").val("");
+    }
+</script>
+
+
+
+
+    <footer><!--底部-->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <img class="footer-icon img-responsive pull-left" src="images/IMLogo2.png"/>
+                    <div class="footer-seg pull-right">
+                        <h5>关于智会</h5>
+                        <p>
+                            智会——基于物联网的智能会议室系统，旨在让企业更智能高效地管理会议室，避免浪费、空置。让使用者更方便有序地预定、使用会议室，提高工作效率和资源利用率，一步到位，全程智能。</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
+            </div>
+            <div class="footer-info">
+                <p>
+                    <!--<a href="http://www.nju.edu.cn">智会首页</a>-->
+                    <!--<a href="http://jw.nju.edu.cn">教务</a>zhi'hui-->
+                    <a role="button" href="#" data-toggle="modal" data-target="#modal-feedback">意见反馈</a>
+                    <a class="special-link" href="#">关于我们^ ^</a>
+                </p>
+                <p>all right reserved 2016</p>
+                <!--<p>Copyright &copy;IM, 2015-2016</p>-->
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Feedback -->
+    <div class="modal fade" id="modal-feedback" tabindex="-1" role="dialog" aria-labelledby="modal-title-rate">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a role="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                    <h4 class="modal-title" id="modal-title-rate">我要对网站内容进行反馈&gt;&lt;</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="feedback-content">内容</label>
+                            <textarea class="form-control" id="feedback-content"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a role="button" class="btn btn-default" data-dismiss="modal">取消</a>
+                    <a role="button" class="btn btn-primary" id="send-feedback">发送反馈</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Feedback End -->
+    <script src="js/footer.js" ></script>
+    <script src="js/header.js" ></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-41774271-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

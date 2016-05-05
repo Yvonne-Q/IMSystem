@@ -191,3 +191,18 @@
     color: #88C5E1;
     cursor: pointer;
 }
+.section .item{
+    margin: 0 0 20px 0;
+    padding: 0 10px;
+    border: none;
+}
+.section .item img{
+    width: 255px;
+    height: 172px;
+}
+.conclusion_info{
+    display: none;
+}
+#complete_con{
+    display: none;
+}
