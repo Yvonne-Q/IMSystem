@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>IM-智会-会议记录</title>
+    <title>IM-会议记录</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css" />
     <link href="css/index.css" rel="stylesheet" type="text/css" />
@@ -50,7 +50,7 @@
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav pull-right">
                                     <li id="nav-index"><a href="/">首页</a></li>
-                                    <!--<li id="nav-course"><a href="/course">课程</a></li>-->
+                                    <li id="nav-record" class="active"><a href="/">会议记录</a></li>
                                     <li id="nav-notice"><a href="announcement.html">公告<span class="badge">2</span></a></li>
                                     <li id="nav-user" class="dropdown">
                                         <a href="#user" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人 <span class="caret"></span></a>
@@ -86,10 +86,70 @@
             </nav>
         </header><!--导航栏-->
         <div class="content">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="section">
+                        <h4>课程列表</h4>
+                        <ul id="water-fall"></ul>
+                        <ul id="cache" style="display: none">
+                            <li class="item">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+                                        <div class="item-avatar">
+                                            <div class="box-f">
+                                                <div class="box-s">
+                                                    <div class="box-t img-responsive" style="background-image: url(/Public/img/icons/literature.png);">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11">
+                                        <div class="item-main">
+                                            <div class="item-header">
+                                                <a class="f-main f-16" href="/Course/148" target="_blank">俄罗斯文学经典的当代意义</a>
+                                                <a href="/Course/148#anchor-comments" class="f-light">
+                                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 49                                                </a>
+                                                <div class="score">
+                                                    <img src="/Public/img/star.png">
+                                                    <img src="/Public/img/star.png">
+                                                    <img src="/Public/img/star.png">
+                                                    <img src="/Public/img/star.png">
+                                                    <img src="/Public/img/star.png">
+                                                    <span class="f-14 f-sub star">4.7分</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-subheader">
+                                            </div>
 
+                                            <div class="item-tags">
+                                                <a class="tag tag-info" href="/Course/tag/id/446">3学分</a><a class="tag tag-info" href="/Course/tag/id/873">通识课</a><a class="tag tag-info" href="/Course/tag/id/445">文学院</a><a class="tag tag-info" href="/Course/tag/id/447">董晓</a><a class="tag tag-info" href="/Course/tag/id/18">文学</a><a class="tag tag-info" href="/Course/tag/id/8">法律</a>                                            </div>
+                                            <div class="item-content">老师旁征博引，讲课幽默引人入胜，不乏深刻的见地，对俄罗斯文学名著进行当代阐释，揭示其中永恒的美学价值和社会意义，注重文学和当代的联系。不会拘于文学，思想开放。</div>
+                                            <!--<div class="item-footer">-->
+                                            <!--<a href="/Course/148#comments">-->
+                                            <!--<span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 评论 49-->
+                                            <!--</a>-->
+                                            <!--<a href="/Course/148#comments">学分 49</a>-->
+
+                                            <!--</div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
         </div>
     </div>
-
+                <div class="hidden-xs hidden-sm col-md-4 col-lg-4">
+                    <div class="section section-courses">
+                        <h4>课程推荐</h4>
+                        <a href="/Course/41" target="_blank">中国现当代文学名著研讨<span> <span>4.5</span>分</span></a><a href="/Course/221" target="_blank">新视野中国史<span> <span>5.0</span>分</span></a><a href="/Course/508" target="_blank">《科学革命的结构》阅读<span> <span>5.0</span>分</span></a><a href="/Course/512" target="_blank">《经济发展理论》阅读<span> <span>5.0</span>分</span></a><a href="/Course/452" target="_blank">艺术世界中的社会学<span> <span>5.0</span>分</span></a>                </div>
+                    <div class="section">
+                        <h4>标签推荐</h4>
+                        <a class="tag tag-info" href="/Course/tag/id/448">2学分</a><a class="tag tag-info" href="/Course/tag/id/54">其他</a><a class="tag tag-info" href="/Course/tag/id/875">研讨课</a><a class="tag tag-info" href="/Course/tag/id/873">通识课</a><a class="tag tag-info" href="/Course/tag/id/878">公选课</a><a class="tag tag-info" href="/Course/tag/id/18">文学</a><a class="tag tag-info" href="/Course/tag/id/17">历史</a><a class="tag tag-info" href="/Course/tag/id/15">社会</a><a class="tag tag-info" href="/Course/tag/id/22">生物</a><a class="tag tag-info" href="/Course/tag/id/27">计算机</a>                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
