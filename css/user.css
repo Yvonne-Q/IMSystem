@@ -307,3 +307,8 @@
     height: 32px;
     width: 100px;
 }
+#user_pic img{
+    width: 100%;
+    /*margin: 20px auto;*/
+    display: block;
+}
