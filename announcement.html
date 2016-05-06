@@ -2,9 +2,549 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="css/detail.css" rel="stylesheet" type="text/css"/>
+    <link href="css/user.css" rel="stylesheet" type="text/css"/>
+    <link href="css/reservations.css" rel="stylesheet" type="text/css"/>
+    <link href="css/announcement.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css"/>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.toaster.js"></script>
+    <script src="js/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IM-公告</title>
 </head>
 <body>
+<div class="container">
+    <header class="header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+                    <div class="navbar-header navbar-left">
+                        <a class="navbar-brand-mc" href="/">
+                            <img src="images/IMlogoM.png" alt="logo"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden-xs visible-sm-block col-sm-2">
+                    <div class="navbar-header navbar-left">
+                        <a class="navbar-brand-mc" href="/">
+                            <img src="images/IMlogoM.png" alt="logo"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="visible-xs-block col-xs-2">
+                    <div class="navbar-header navbar-left">
+                        <a class="navbar-brand-mc" href="/">
+                            <img src="images/IMLogo2.png" alt="logo"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-8 col-sm-5 col-md-5 col-lg-5"></div>
+                <div class="hidden-xs col-sm-5 col-md-4 col-lg-4">
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav pull-right">
+                            <li id="nav-index"><a href="/">首页</a></li>
+                            <li><a href="myMeeting.html">会议记录</a></li>
+                            <li id="nav-notice"><a href="announcement.html">公告<span class="badge">2</span></a></li>
+                            <li id="nav-user" class="dropdown">
+                                <a href="#user" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">个人 <span class="caret"></span></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="user.html">个人主页</a></li>
+                                    <li><a>会点：35</a></li>
+                                    <li><a href="../images/message" id="nav-messages">消息盒子</a></li>
+                                    <li><a href="/user/basic">资料设置</a></li>
+                                    <li><a href="/user/logout" class="logout">退出登录</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visible-xs-block col-xs-2">
+                    <div class="nav nav-hamburger pull-right">
+                        <a href="#ham" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false"><span
+                                class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="myMeeting.html">会议记录</a></li>
+                            <li id="xs-nav-notice"><a href="/announcement">公告<span class="badge">2</span></a></li>
+                            <li><a href="user.html">个人主页</a></li>
+                            <li><a href="/message" id="nav-messages">消息盒子</a></li>
+                            <li><a href="/user/basic">资料设置</a></li>
+                            <li><a href="/user/logout" class="logout">退出登录</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    </header><!--导航栏-->
+    <div class="content">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+
+
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="section notice-body">
+            <h4>所有公告</h4>
+            <ul  class="tab-pane fade in active" id="all" href="#all">
+            <li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2015.12.29</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="21">相关公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14">公告内容区域公告内容区域公告内容区域公告内容区域公告内容区域公告内容区域公告内容区域公告内容区域公告内容区域公告内容区域</div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item"><!--一个公告模块-->
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2015.12.28</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="20">【通知】公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14">各位员工：<br />
+                                &nbsp;&nbsp;&nbsp; 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2015.12.28</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="19">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14"> 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2015.12.28</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="18">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14"> 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2015.03.09</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="17">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14">各位员工，
+                                <p>
+                                    <span> 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域<span> 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</span></span>
+                                </p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2015.03.09</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="16">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14">各位员工：<br>
+                                <br>
+                                &nbsp;&nbsp;&nbsp;  此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2015.03.09</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="15">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14">各位员工：<br>
+                                <br>
+                                &nbsp;&nbsp;&nbsp; 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.12.20</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="14">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14"><h4>各位员工：</h4>
+                                <p>
+                                    此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.09.08</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="13">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14"><h4>各位员工：</h4>
+                                <p> 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.08.30</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="12">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14">
+                                <h4>
+                                    请近期预定A2-106会议室的员工注意：
+                                </h4>
+                                <p>
+                                    此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域
+                                </p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.08.30</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="11">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14"><h4>各位市场部的员工：</h4>
+                                <p>
+                                    此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域
+                                </p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.08.30</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="10">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14"><h4>各位员工：</h4>
+                                <p>
+                                    此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域
+                                </p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.07.31</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="9">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14">
+                                <p> 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.07.06</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="8">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14">		<p> 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.06.19</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="7">公告标题 </a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14"><p> 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.06.17</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="6">IM-网站使用说明</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14"><p> 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.06.17</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="5">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14">
+                                <p>此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.06.13</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="2">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14">		<p>
+                                此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域
+                            </p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.05.20</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="3">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14"><p> 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li><li class="item">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="item-top-line">
+                            <mark class="f-14">2013.03.04</mark>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="item-title item-top-line">
+                            <a class="f-main a-title" href="#" data-toggle="modal" data-target="#modal-notice" data-id="4">公告标题</a>
+                        </div>
+                        <blockquote class="announcement-content">
+                            <div class="f-light f-14"><p> 此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域此处为公告内容区域</p></div>
+                        </blockquote>
+                    </div>
+                </div>
+            </li>    </ul>
+            </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+
+            <!-- Modal Notice -->
+            <div class="modal fade notice-modal" id="modal-notice" tabindex="-1" role="dialog" aria-labelledby="modal-title-notice">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+                            <h4 class="modal-title" id="modal-title-notice"></h4>
+                            <span></span>
+                        </div>
+                        <div class="modal-body f-14">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">我知道了</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+<footer><!--底部-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <img class="footer-icon img-responsive pull-left" src="images/IMLogo2.png"/>
+                <div class="footer-seg pull-right">
+                    <h5>关于智会</h5>
+                    <p>
+                        智会——基于物联网的智能会议室系统，旨在让企业更智能高效地管理会议室，避免浪费、空置。让使用者更方便有序地预定、使用会议室，提高工作效率和资源利用率，一步到位，全程智能。</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></div>
+        </div>
+        <div class="footer-info">
+            <p>
+                <!--<a href="http://www.nju.edu.cn">智会首页</a>-->
+                <!--<a href="http://jw.nju.edu.cn">教务</a>zhi'hui-->
+                <a role="button" href="#" data-toggle="modal" data-target="#modal-feedback">意见反馈</a>
+                <a class="special-link" href="#">关于我们^ ^</a>
+            </p>
+            <p>all right reserved 2016</p>
+            <!--<p>Copyright &copy;IM, 2015-2016</p>-->
+        </div>
+    </div>
+</footer>
+<!-- Modal Feedback -->
+<div class="modal fade" id="modal-feedback" tabindex="-1" role="dialog" aria-labelledby="modal-title-rate">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a role="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                <h4 class="modal-title" id="modal-title-rate">我要对网站内容进行反馈&gt;&lt;</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="feedback-content">内容</label>
+                        <textarea class="form-control" id="feedback-content"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a role="button" class="btn btn-default" data-dismiss="modal">取消</a>
+                <a role="button" class="btn btn-primary" id="send-feedback">发送反馈</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Feedback End -->
+<script src="js/footer.js" ></script>
+<script src="js/header.js" ></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41774271-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>
