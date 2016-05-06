@@ -500,4 +500,10 @@ hr {
         padding: 96px 0;
     }
 }
+.room_free{
+    background-image: url(../images/meetingfree.png);
+}
+.room_busy{
+    background-image: url(../images/meetingbusy.png);
+}
 
